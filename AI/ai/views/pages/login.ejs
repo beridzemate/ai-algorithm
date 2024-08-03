@@ -1,0 +1,41 @@
+<% var bodyClass = bodyClass %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+
+<body class="<%= bodyClass %>">
+
+<div class="login-wrapper">
+  <div class="container">
+    <div class="logo-wrapper">
+      <% include ../partials/logo.ejs %>
+    </div>
+    <a href="/" class="lang-logo">
+      <img src="/main-image.png">
+    </a>
+    <h1>Ultra secret key required!</h1>
+    <BR>
+    <p>Complete the following sentence:</p>
+    <% if (session.loginError != undefined && session.loginError.length > 0) { %>
+      <div class="alert alert-info text-center" role="alert">
+        <%= session.loginError %>
+      </div>
+
+      <% } %>
+
+      <form action="/loginCheck" method="POST">
+      <p>This is not the <INPUT type="password" name="secretKey" class="login-input"> you're looking for.</p>
+      <p><input type="submit" class="btn btn-lg btn-primary" value="Let me in!"></p>
+
+
+      </form>
+
+      <% include ../partials/banner.ejs %>
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,67 @@
+iframe{
+	border: none;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+}
+
+#api-service-title {
+	margin: 0;
+}
+
+legend {
+	font-weight: 700;
+	width: 100%;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	appearance: button;
+	cursor: pointer;
+	font: inherit;
+
+	@media #{$breakpoint-mobile} {
+		width: 100%;
+	}
+}
+
+textarea {
+	width: 100%;
+}
+
+.thumbnail {
+	>img {
+		display: block;
+    height: auto;
+    max-width: 100%;
+	}
+}
+
+.hoverArea {
+	color: $color-blue;
+
+	&:hover,
+	&:active {
+		background-color: transparent;
+		color: $color-blue;
+		border-bottom: 1px dotted $color-blue;
+	}
+
+	&::before {
+		content: "+";
+		display: inline-block;
+		padding-right: .5em;
+	}
+
+	&.open {
+		&::before {
+			content: "-";
+		}
+	}
+}
