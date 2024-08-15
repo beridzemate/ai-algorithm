@@ -1,7 +1,7 @@
 var NXAPIPacks = require('./api-connector/api-connector.js');
 
 const najax = require('najax');
-const iso6391Table = require('./data/iso639-1');
+const iso6391Table = require('./data/iso639-1.js');
 var md5 = require('md5');
 var crypto = require('crypto');
 

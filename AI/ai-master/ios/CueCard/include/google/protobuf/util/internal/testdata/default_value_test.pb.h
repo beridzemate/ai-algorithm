@@ -85,6 +85,8 @@ class DefaultValueTest : public ::google::protobuf::Message /* @@protoc_insertio
 
   void Swap(DefaultValueTest* other);
 
+
+
   // implements Message ----------------------------------------------
 
   inline DefaultValueTest* New() const { return New(NULL); }
