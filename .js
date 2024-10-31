@@ -14,9 +14,9 @@ function calculateWage(totalHours, hourlyRate, threshold = 150, overtimeCoef = 1
     return totalWage;
 }
 
-// Example Usage
-const totalHours = 160;  // Enter total hours worked
-const hourlyRate = 10;    // Enter hourly wage rate
+
+const totalHours = 160;  
+const hourlyRate = 10;    
 
 const wage = calculateWage(totalHours, hourlyRate);
 console.log(`Total wage: $${wage}`);
